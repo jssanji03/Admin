@@ -1,0 +1,161 @@
+
+@mixin button($background-color:$text,$fontColor: $white,$hover-color:$lightGray,$hover-fontColor:$white) {
+    height: 35px;
+    min-width: auto;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin:0px 5px;
+    background-color: $background-color;
+    color: $fontColor;
+    line-height: 30px;
+     &:hover{
+    background-color: $hover-color;
+    color: $hover-fontColor;
+    font-size: 16px;
+    font-weight: 400;
+    }
+    &:focus{
+    font-size: 16px;
+    font-weight: 400;
+    }
+}
+
+.btn-padding {
+    @include button($background-color:#8130a7,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btn-success {
+    @include button($background-color:#3872dd,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btn-add {
+    @include button($background-color:$primary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btn-search {
+    @include button($background-color:#7C8AA1,$fontColor: $white,$hover-color:#525e70,$hover-fontColor:$white);
+}
+.btn-submit {
+    @include button($background-color:$secondary,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btn-read {
+    @include button($background-color:$yellow,$fontColor: $white,$hover-color:$hover,$hover-fontColor:$white);
+}
+.btnArea{
+  position: fixed;
+  top: 120px;
+  z-index: 999;
+  right:30px;
+  display: block;
+  flex-wrap: wrap;
+  .boardSubmit{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    padding: 3px;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}
+.btn-delete {
+    @include button($background-color:rgb(192, 39, 19),$fontColor: $white,$hover-color:rgb(141, 20, 20),$hover-fontColor:$white);
+}
+.btn-edit {
+    @include button($background-color:rgb(22, 171, 182),$fontColor: $white,$hover-color:rgb(16, 118, 126),$hover-fontColor:$white);
+}
+.btn-cancel {
+    @include button($background-color:rgb(207, 207, 207),$fontColor: $text,$hover-color:rgb(71, 71, 71),$hover-fontColor:$white);
+}
+.btn-more{
+    padding: 10px 30px;
+    background-color: $important;
+    color: $white;
+    transition-duration: .5s;
+    transition-property: transform;
+    &:hover{
+        background-color: $white;
+        border:1px solid $important;
+        color: $important;
+        box-shadow: 0px 3px 8px 0px rgba(197, 197, 197, 0.5);
+        transform: translateY(-6px);
+    }
+    &:focus{
+        background-color: $white;
+        border:1px solid $important;
+        color: $white !important;
+        box-shadow: 0px 3px 8px 0px rgba(197, 197, 197, 0.5);
+        transform: translateY(-6px);
+    }
+}
+
+.btn-cal{
+    @include button($background-color:$secondary,$fontColor: $white,$hover-color:$secondary,$hover-fontColor:$white);
+    width: 35px;
+    height: 35px;
+    
+}
+
+.btn-menu{
+    width: 100%;
+    height: 50px;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    line-height: 40px;
+    color: $text;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    &:hover{
+        color: $white;
+        background-color: $primary;
+    }
+}
+.btn-link{
+    width: 100%;
+    height: 40px;
+    background-color: $secondary;
+    border-radius: 8px;
+    color: $white;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    &:hover{
+        background-color: $white;
+        color: $secondary;
+        border-color: $secondary;
+    }
+}
+
+button{
+    outline-style: none;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+@mixin pill($background-color:green) {
+    background-color: $background-color;
+    color: white;
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.pill-success{
+    @include pill;
+}
+.pill-danger{
+    @include pill($background-color:rgb(175, 25, 25));
+}
+.pill-approval{
+    @include pill($background-color:$primary);
+}
+.pill-draft{
+    @include pill($background-color:$yellow);
+}

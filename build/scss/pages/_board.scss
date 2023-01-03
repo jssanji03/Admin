@@ -1,0 +1,117 @@
+.portlet{
+    padding: 30px 0px;
+    border: 1px solid rgb(150, 150, 150);
+    position: relative;
+}
+.editPage{
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left:45%
+}
+.editPage{
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left:45%
+}
+.Propaganda{
+  .editPage{
+    position: absolute;
+    z-index: 999;
+    top: 20%;
+    left:45%
+  }
+}
+
+.photoLink{
+    // height: 450px;
+    height: inherit;
+}
+.carousel-caption{
+  margin-bottom: 30px;
+}
+
+.marqueeBox{
+    .marquee-wrapper {
+      ul{
+        min-height:60px;
+        height:auto;
+        position: relative;
+        @media #{$breakpoint-lg}{
+          height: 80px;
+        }
+        @media #{$breakpoint-md}{
+          height: 110px;
+        }
+        @media #{$breakpoint-sm}{
+          height: 110px;
+        }
+        @media #{$breakpoint-xs}{
+          height: 210px;
+        }
+        li{
+            position: absolute;
+            width: 100%;
+            height:20px;
+            top: -10;
+            opacity: 0;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0px 100px;
+            line-height: 20px;
+            animation-name: marquee;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            @media #{$breakpoint-lg,$breakpoint-md,$breakpoint-sm,$breakpoint-xs}{
+              padding: 0px 10px;
+            }
+          }
+        }
+    }
+}
+
+@keyframes marquee {
+  0% { 
+    bottom: 0%;
+    opacity: 1; 
+  }
+  10% { 
+    bottom: 70%;
+  }
+  50% { 
+    bottom: 70%;
+  }
+  60% { 
+    top: -200%;
+  }
+  100% { top: -200%;
+  }
+}
+
+.alert{
+  position: fixed;
+  z-index: 9999;
+  width: 80%;
+  top:40px
+}
+.note-editable{
+  background-color: #fff;
+}
+
+.nav-board{
+  color:$white;
+  border-radius:5px;
+  line-height: 20px;
+  padding:8px 10px;
+  margin: 0px 10px;
+  &:hover{
+    color: rgb(236, 186, 22);
+  }
+  &.active{
+    background-color: $primary;
+    &:hover{
+      color: $white;
+    }
+  }
+}
