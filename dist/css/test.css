@@ -1,0 +1,53 @@
+.process section {
+    padding: 10px 20px;
+}
+
+.demoImages {
+    height: 200px;
+}
+
+.portlet {
+    padding: 30px 0px;
+    border: 1px solid #969696;
+    position: relative;
+}
+
+.portlet img {
+    width: 100%
+}
+
+.portlet .editPage {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 45%;
+}
+
+.btn-edit {
+    height: 35px;
+    min-width: auto;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 0px 5px;
+    background-color: #16abb6;
+    color: #fff;
+    line-height: 30px;
+}
+
+.btn-delete {
+    height: 35px;
+    min-width: auto;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 0px 5px;
+    background-color: #c02713;
+    color: #fff;
+    line-height: 30px;
+}
+
+.sidebar{
+    padding-bottom: 10rem;
+    overflow-y: scroll;
+}

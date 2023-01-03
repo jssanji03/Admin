@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | EtherWan</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../build/scss/style.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../dist/img/Logo_w.png" alt="AdminLTE Logo" class="">
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布作業</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布 / 維護管理</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 排程 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    排程管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="process.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>排程設定</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 公告 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    公告管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="announcement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="announcementADD.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 行事曆 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    行事曆管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 輪播 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    輪播管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 首頁內頁 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    首頁內頁管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href=#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播設定</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 連結 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-link"></i>
+                                <p>
+                                    連結管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 角色與權限 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-shield"></i>
+                                <p>
+                                    角色與權限管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 郵件通知 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>
+                                    郵件通知管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 後台Menu -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    後台Menu管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 應用程式 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-box"></i>
+                                <p>
+                                    應用程式管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 參數 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-chart-bar"></i>
+                                <p>
+                                    參數管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header primary">頁面設計</li>
+                        <li class="nav-item">
+                            <a href="board.html" class="nav-link">
+                                <i class="fas fa-columns nav-icon"></i>
+                                <p>版面管理</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">版面維護</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="./board.html">版面維護</a></li>
+                                <li class="breadcrumb-item active">版面編輯</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-lg-0 mt-4">
+                        <section class="card p-0">
+                            <div class="card-header bg_purple white">
+                                <h3 class="card-title lh-30 m-0">清單歷程</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                               <table class="table datatable-RWD nowrap table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>排序</th>
+                                            <th>開始時間</th>
+                                            <th>結束時間</th>
+                                            <th>表單編號</th>
+                                            <th>狀態</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td>2021/08/25</td>
+                                            <td>2021/12/25</td>
+                                            <td>A001</td>
+                                            <td><span>審核中</span></td>
+                                            <td>
+                                                <a type="submit" class="btn btn-edit btn-sm">編輯</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </section>
+                        
+                        <section class="card p-0">
+                            <div class="card-header bg_purple">
+                                <nav class="nav nav-pills" id="myTab" role="tablist">
+                                    <a class="nav-board  active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                                        role="tab">頁面設定一</a>
+                                    <a class="nav-board" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                                        role="tab">頁面設定二</a>
+                                </nav>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <form>
+                                        <div class="card-body row">
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>排序</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Sort">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Title">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>副標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="SubTitle">
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>網頁描述</label>
+                                                    <textarea class="form-control" rows="5" placeholder="Description"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" class="form-control" id="File">
+                                                        <label class="input-group-text">上傳檔案</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片預覽</label>
+                                                    <div style="height: 100px">
+                                                        <img class="picDemo" data-bs-toggle="modal" data-bs-target="#previewModal" style="height: 100px;">
+                                                        <canvas class="the-canvas" style="display: none;"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>自定義</label>
+                                                    <textarea id="summernote" class="summernote">
+                                                            <p>Hello, world</p>
+                                                            <p>Summernote can insert HTML string</p>
+                                                    </textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>按鈕文字</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>連結</label>
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="text" class="form-control" placeholder="OutSideURL"">
+                                                            <div class=" input-group-text">
+                                                        <input class="form-check-inline" type="checkbox" value="">
+                                                        <span class="form-check-label">另開視窗</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>開始時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>結束時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">是否發佈</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">已刪除</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>表單編號</label>
+                                                <input type="text" class="form-control form-control-sm" placeholder="FormNo">
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>狀態</label>
+                                                <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
+                                                    <option selected="selected">申請</option>
+                                                    <option>審核中</option>
+                                                    <option>駁回</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                        <div class="card-footer p-0xw">
+                                            <button type="submit" id="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="home-tab">
+                                    <form>
+                                        <div class="card-body row">
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>排序profile</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Sort">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-6">
+                                                    <label>標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Title">
+                                                </div>
+                                                <div class="form-group col-6">
+                                                    <label>副標題</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="SubTitle">
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>網頁描述</label>
+                                                    <textarea class="form-control" rows="5" placeholder="Description"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="file" class="form-control" id="File">
+                                                        <label class="input-group-text">上傳檔案</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>圖片預覽</label>
+                                                    <div style="height: 100px">
+                                                        <img class="picDemo" data-bs-toggle="modal" data-bs-target="#previewModal" style="height: 100px;">
+                                                        <canvas class="the-canvas" style="display: none;"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-12">
+                                                    <label>自定義</label>
+                                                    <textarea id="summernote" class="summernote">
+                                                            <p>Hello, world</p>
+                                                            <p>Summernote can insert HTML string</p>
+                                                    </textarea>
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>按鈕文字</label>
+                                                    <input type="text" class="form-control form-control-sm" placeholder="ButtonText">
+                                                </div>
+                                                <div class="form-group col-md-6 col-12">
+                                                    <label>連結</label>
+                                                    <div class="input-group input-group-sm">
+                                                        <input type="text" class="form-control" placeholder="OutSideURL"">
+                                                            <div class=" input-group-text">
+                                                        <input class="form-check-inline" type="checkbox" value="">
+                                                        <span class="form-check-label">另開視窗</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>開始時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>結束時間</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="far fa-calendar-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control form-control-sm float-right singleDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">是否發佈</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-3 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label">已刪除</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>表單編號</label>
+                                                <input type="text" class="form-control form-control-sm" placeholder="FormNo">
+                                            </div>
+                                            <div class="form-group col-md-6 col-12">
+                                                <label>狀態</label>
+                                                <select class="form-control form-control-sm singleSelect" disabled="disabled" style="width: 100%;">
+                                                    <option selected="selected">申請</option>
+                                                    <option>審核中</option>
+                                                    <option>駁回</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                        <div class="card-footer p-0xw">
+                                            <button type="submit" id="submit" class="btn btn-submit btn-sm"> 儲存</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <!-- /.card-body -->
+                        </section>
+                        <!-- Modal -->
+                        <div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered ">
+                                <div class="modal-content previewBg">
+                                    <div class="modal-body">
+                                        <img src="#" alt="" class="picDemo">
+                                    </div>
+                                    <div class="modal-footer text-center">
+                                        <div class="col-12">
+                                            <p>Page: <span id="page_num"></span> / <span id="page_count"></span></p>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-add" id="prev">上一頁</button>
+                                            <button type="button" class="btn btn-add" id="next">下一頁</button>
+                                            &nbsp; &nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.content-wrapper -->
+        <footer class="main-footer bg-black">
+            &copy; 2021 EtherWAN Systems, Inc. All rights reserved.
+            All rights reserved.
+        </footer>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery/jquery-ui.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTable -->
+    <script src="../plugins/DataTables-1.10.25/DataTables-1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <!-- js tree -->
+    <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- PDF -->
+    <script src="../plugins/pdfjs-2.9.359-dist/build/pdf.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-lite.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/board.js"></script>
+    <script src="../dist/js/index.js"></script>
+</body>
+
+</html>s

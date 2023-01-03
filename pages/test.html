@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | EtherWan</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../build/scss/style.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed-top">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../dist/img/Logo_w.png" alt="AdminLTE Logo" class="">
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                                                   with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../index.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布作業</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>發布 / 維護管理</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 排程 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    排程管理
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="process.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>排程設定</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 公告 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    公告管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="announcement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="announcementADD.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>公告發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 行事曆 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    行事曆管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 輪播 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    輪播管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 首頁內頁 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    首頁內頁管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href=#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>輪播設定</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>行事曆</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 連結 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-link"></i>
+                                <p>
+                                    連結管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>連結發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 角色與權限 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-shield"></i>
+                                <p>
+                                    角色與權限管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>角色與權限發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 郵件通知 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>
+                                    郵件通知管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>郵件通知發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 後台Menu -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    後台Menu管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>後台Menu發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 應用程式 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-box"></i>
+                                <p>
+                                    應用程式管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>應用程式發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 參數 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-chart-bar"></i>
+                                <p>
+                                    參數管理
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數通知管理</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>參數發布作業</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header important">頁面設計</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-columns nav-icon"></i>
+                                <p>版面管理</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper row">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">排程設定</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">排程設定</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="HomeBanner col-12">
+                <div class="container">
+                    <div class="row pt-70 align-items-center">
+                        <div class="col-lg-3 col-12 order-lg-first order-last mt-lg-0 mt-3">
+                            <div class="row flex-xl-column d-flex pe-4">
+                                <div class="information_card bg_gradient">
+                                    <a class="" href="./pages/homepage.html">
+                                        <h3 class="white">關於益網</h3>
+                                        <p class="important fontsEn fz-12 lh-30">About EtherWan</p>
+                                    </a>
+                                </div>
+                                <div class="information_card mt-4 bg_gradient">
+                                    <a class="" href="./pages/companyForm.html">
+                                        <h3 class="white">公司管理辦法/表單</h3>
+                                        <p class="important fontsEn fz-12 lh-30 ">Policy / Form</p>
+                                    </a>
+                                </div>
+                                <div class="information_card mt-4 bg_gradient">
+                                    <a class="" href="./pages/useForm.html">
+                                        <h3 class="white">常用資訊</h3>
+                                        <p class="important fontsEn fz-12 lh-30">Useful Information</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-12 p-0 order-lg-last order-first">
+                            <div id="carouselExampleIndicators" class="carousel slide">
+                                <div class="carousel-indicators ">
+                                </div>
+                                <div class="carousel-inner" style="height: 350px;">
+                                    <div class="carousel-item active photoLink">
+                                                                    <img src="https://fakeimg.pl/1000x350/" class="img-fluid" alt="...">
+                                                                </div>
+                                                                <div class="carousel-item photoLink">
+                                                                    <img src="https://fakeimg.pl/1000x350/" class="img-fluid" alt="...">
+                                                                </div>
+                                                                <div class="carousel-item photoLink">
+                                                                    <img src="https://fakeimg.pl/1000x350/" class="img-fluid" alt="...">
+                                                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="OneGrid portlet border-blue">
+                <div class="container">
+                    <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                    <div class="row">
+                        <div>
+                            <a href="#"><img name="Image" src="https://fakeimg.pl/1300x350/" class="img-fluid" alt="..."></a>
+                        </div>
+                        <div class="card-body">
+                            <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                            <p name="Description">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                            <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                            <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                    class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="customArea">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="TwoGrid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 p-1">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid"
+                                            alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div>
+                                        <ul>
+                                            <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloremque quisquam aspernatur, iusto repudiandae sint. Officiis, voluptatem vero corrupti assumenda libero rerum eligendi fuga porro aspernatur! Doloribus omnis modi laudantium.</p></li>
+                                            <li>Veniam, ad nisi, delectus maiores esse architecto quae quasi sit quis temporibus officia vitae voluptate eos omnis quod, voluptatem accusantium recusandae necessitatibus. Beatae, temporibus velit voluptates recusandae perspiciatis fugiat? Repellat.</li>
+                                            <li>Incidunt doloremque veniam atque est libero asperiores, quae at porro non dolorum doloribus nihil iusto quos quis repudiandae perferendis voluptatem unde, autem fugiat sed vero exercitationem eos necessitatibus? Adipisci, doloribus.</li>
+                                        </ul>
+                                    </div>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 p-1">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/636x350/" class="img-fluid"
+                                            alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                            class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ThreeGrid portlet">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                            class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                            class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/420x235/" class="img-fluid" alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                            class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="FourGrid portlet">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i
+                                            class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div class="row">
+                                <div>
+                                    <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                    <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                            the card's
+                                            content.</p>
+                                    <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                    <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i class="fas fa-angle-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div>
+                                <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                            </div>
+                            <div class="card-body">
+                                <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <h3 name="Title" class="mb-2"><a href="#" class="card-Title">Title</a></h3>
+                            <div>
+                                <a href="#"><img name="Image" src="https://fakeimg.pl/306x235/" class="img-fluid" alt="..."></a>
+                            </div>
+                            <div class="card-body">
+                                <h6 name="SubTitle" class="mb-2 card-Subtitle lh-20">Card subtitle</h6>
+                                <p name="Description">Some quick example text to build on the card title and make up the bulk of
+                                        the card's
+                                        content.</p>
+                                <a name="SideURL" href="#" class="card-link lh-50">Card link</a>
+                                <button name="ButtonText" class="btn btn-menu" onclick="window.location.href='#'">連結 <i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="calendar col-lg-6 col-12 border" >
+                <div class="container">
+                    <div class="row">
+                        <div class="p-3 card-radius bg-white shadow-sm d-flex flex-wrap justify-content-center">
+                            <div class="col-12">
+                                <p class="fz-20 lh-40 border-bottom text-center primary">行事曆</p>
+                            </div>
+                            <div class="col-9">
+                                <p class="lh-40 text-center">＊點選可查看當日行程</p>
+                                <div class="datepicker"></div>
+                                <ul id="event" class="event m-3">
+            
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="leaveApplication col-lg-6 col-12" >
+                <div class="container" style="height: 100%;">
+                    <div class="row p-3 card-radius bg-white shadow-sm">
+                        <div class="col-12">
+                            <p class="fz-20 lh-40 border-bottom primary text-center">請假資訊</p>
+                        </div>
+                        <div class="col-12 my-2">
+                            <table class="table table-striped datatable-RWD">
+                                <thead>
+                                    <tr class="fz-15">
+                                        <th scope="col">人員</th>
+                                        <th scope="col">部門</th>
+                                        <th scope="col">代理人</th>
+                                        <th scope="col">假別</th>
+                                        <th scope="col">開始時間</th>
+                                        <th scope="col">結束時間</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="fz-13">
+                                        <td>Mark</td>
+                                        <td>TD</td>
+                                        <td>John Lin</td>
+                                        <td>特休</td>
+                                        <td>2021/09/02</td>
+                                        <td>2021/09/03</td>
+                                    </tr>
+                                    <tr class="fz-13">
+                                        <td>Mark</td>
+                                        <td>TD</td>
+                                        <td>John Lin</td>
+                                        <td>特休</td>
+                                        <td>2021/09/02</td>
+                                        <td>2021/09/03</td>
+                                    </tr>
+                                    <tr class="fz-13">
+                                        <td>Mark</td>
+                                        <td>TD</td>
+                                        <td>John Lin</td>
+                                        <td>特休</td>
+                                        <td>2021/09/02</td>
+                                        <td>2021/09/03</td>
+                                    </tr>
+                                    <tr class="fz-13">
+                                        <td>Mark</td>
+                                        <td>TD</td>
+                                        <td>John Lin</td>
+                                        <td>特休</td>
+                                        <td>2021/09/02</td>
+                                        <td>2021/09/03</td>
+                                    </tr>
+                                    <tr class="fz-13">
+                                        <td>Mark</td>
+                                        <td>TD</td>
+                                        <td>John Lin</td>
+                                        <td>特休</td>
+                                        <td>2021/09/02</td>
+                                        <td>2021/09/03</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12 text-end footer">
+                            <a class="btn-more" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">查看更多 <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="LinkURL col-lg-6 col-12 border">
+                <div class="container">
+                    <div class="row">
+                        <div class="p-4 card-radius bg-white shadow-sm d-flex flex-wrap">
+                            <div class="col-12">
+                                <p class="fz-20 lh-40 border-bottom text-center primary">系統連結</p>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <ul class="linkList">
+                                            <li>
+                                                <button class="btn btn-menu">員工園地 <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-menu">文件檔案區 <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-menu">網頁信箱 <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-menu">SalesForce <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <ul class="linkList">
+                                            <li>
+                                                <button class="btn btn-menu">線上學習平台 <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-menu">Redmine追蹤管理系統 <i
+                                                        class="fas fa-angle-right"></i></button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-menu">匯率查詢系統 <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn-menu">退貨維護查詢 <i class="fas fa-angle-right"></i></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-end align-items-end">
+                                <a class="" href="sysForm.html">快速連結 <i class="mx-2 fas fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="Propaganda col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 bg_third marqueeBox overflow-hidden p-2">
+                            <p class="white text-center f-500 fz-25"><i class="fas fa-bell"></i> 即時宣導</p>
+                            <div class="col-12 mt-4 marquee-wrapper" id="marquee">
+                                <ul class="white mx-auto marquee-canvas">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="Organization col-12">
+                <div class="container jOrgChart">
+                    <button class="btn btn-primary ext shadow ">全部展開 &nbsp; <i class="fas fa-sitemap"></i></button>
+                    <button type="button" class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#searchPeople2">
+                        人員搜尋
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="searchPeople2" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">人員搜尋</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Main content -->
+                                    <section class="content">
+                                        <div class="container-fluid">
+                                            <h3 class="text-center primary">Search</h3>
+                                            <div class="row justify-content-center">
+                                                <div class="col-6">
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control form-control-sm"
+                                                            placeholder="請輸入名字...">
+                                                        <button class="btn btn-search" type="button">搜尋</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <table class="display responsive nowrap datatable-RWD" style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>申請單編碼</th>
+                                                <th>申請作業名稱</th>
+                                                <th>申請作業連結</th>
+                                                <th>申請者</th>
+                                                <th>申請日期</th>
+                                                <th>發布起始日</th>
+                                                <th>發布結束日</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0001</td>
+                                                <td>行事曆</td>
+                                                <td><a href="#">申請內容</a></td>
+                                                <td>Mark</td>
+                                                <td>2021/08/25</td>
+                                                <td>2021/10/01</td>
+                                                <td>2021/10/05</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5 orgArea" id='jOrgChart'></div>
+                </div>
+            </section>
+            <section class="announcement">
+                <div class="container" style="height: 100%;">
+                    <div class="p-3 card-border d-flex flex-wrap">
+                        <div class="col-12">
+                            <p class="fz-20 lh-40 border-bottom primary text-center">公告</p>
+                        </div>
+                        <div class="col-12 my-2">
+                            <ul class="lh-30 ">
+                                <li class="d-flex justify-content-between">
+                                    <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                        益公字第07003號_企業識別系統</a>
+                                    <span class="third">2021/08/19</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                        益公字第07005號_企業識別系統</a>
+                                    <span class="third">2021/08/18</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                        益公字第07005號_企業識別系統</a>
+                                    <span class="third">2021/08/18</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                        益公字第07005號_企業識別系統</a>
+                                    <span class="third">2021/08/18</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                        益公字第07005號_企業識別系統</a>
+                                    <span class="third">2021/08/18</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 text-end align-items-end">
+                            <a class="" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">過往資訊 <i
+                                    class="mx-2 fas fa-angle-right"></i></a>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-fullscreen">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">過往資訊</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="lh-30 my-2 p-1">
+                                            <li class="d-flex justify-content-between">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07003號_企業識別系統</a>
+                                                <span class="third">2021/08/19</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <a href="./public/pdf/Corporate Brand Guidelines_CH.pdf" target="_blank">(110)
+                                                    益公字第07005號_企業識別系統</a>
+                                                <span class="third">2021/08/18</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between">
+                                                <a href="#" target="_blank">(110) 益公字第07005號_ Lorem ipsum dolor sit.</a>
+                                                <span class="third">2021/08/17</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Trigger the modal with a button -->
+            <section>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal33"
+                    data-bs-whatever="@mdo">Open modal for @mdo</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal33" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Message:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Send message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer bg-black">
+            &copy; 2021 EtherWAN Systems, Inc. All rights reserved.
+            All rights reserved.
+        </footer>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <script src="../plugins/jquery/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTable -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <script src="../plugins/Magicsuggest/js/magicsuggest-min.js"></script>
+    <script src="../plugins/select2-4.0.13/js/select2.full.min.js"></script>
+    <!-- js tree -->
+    <script src="../plugins/jstree-3.3.11/dist/jstree.min.js"></script>
+    <!-- jOrgChart -->
+    <script src="../plugins/jOrgChart/jquery.jOrgChart.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/board.js"></script>
+    <script src="../dist/js/index.js"></script>
+    <script src="../dist/js/organization.js"></script>
+    <script>
+        var myCarousel = document.querySelector('#carouselExampleIndicators')
+        var carousel = new bootstrap.Carousel(carouselExampleIndicators, {
+            interval: 2000,
+            wrap: true
+        })
+    </script>
+    <script>
+        var exampleModal = document.getElementById('exampleModal')
+            exampleModal.addEventListener('show.bs.modal', function (event) {
+                // Button that triggered the modal
+                var button = event.relatedTarget
+                // Extract info from data-bs-* attributes
+            })
+    </script>
+</body>
+
+</html>
